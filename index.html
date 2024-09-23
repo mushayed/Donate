@@ -22,10 +22,16 @@
     />
 
     <style>
-        .lexend-font {
-            font-family: "Lexend", sans-serif;
-            font-style: normal;
-        }
+      .lexend-font {
+        font-family: "Lexend", sans-serif;
+        font-style: normal;
+      }
+
+      .blur-bg {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: backdrop-filter 0.3s ease;
+      }
     </style>
 
     <!-- Custom color -->
@@ -43,8 +49,181 @@
     </script>
   </head>
   <body class="lexend-font">
-    <header>Hello World! How are you?</header>
-    <main></main>
-    <footer></footer>
+    <!-- header section starts here -->
+    <header class="bg-[#F9F7F3] sticky top-0 blur-bg">
+      <nav class="container mx-auto">
+        <div class="navbar">
+          <div class="navbar-start">
+            <a class="btn bg-my-green">Blog</a>
+          </div>
+          <div class="navbar-center hidden lg:flex gap-3">
+            <div class="border-2 border-dashed">
+              <img src="./assets/logo.png" alt="Donating Coin Image" />
+            </div>
+            <h2 class="font-bold">Donate Bangladesh</h2>
+          </div>
+          <div class="lg:hidden w-32">
+            <h2 class="font-bold">Donate BD</h2>
+          </div>
+          <div class="navbar-end flex gap-1 lg:gap-2">
+            <div class="border-2 border-dashed">
+              <img src="./assets/coin.png" alt="Coin Image" />
+            </div>
+            <div><span id="my-balance">5500</span>BDT</div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main section starts here -->
+    <main>
+      <section id="second-nav" class="sticky top-16 container mx-auto h-20 flex items-center justify-center gap-3">
+        <div>
+          <a class="btn bg-my-green">Donation</a>
+        </div>
+        <div>
+          <a class="btn">History</a>
+        </div>
+      </section>
+      <div class="border-b-2 sticky top-36"></div>
+
+      <section class="w-[90%] lg:container mx-auto flex flex-col gap-8 py-8">
+        <section
+          class="border-2 rounded-lg flex flex-col lg:flex-row p-8 gap-2 justify-evenly"
+        >
+          <div class="lg:w-[31rem] border border-slate-400 border-dashed">
+            <img src="./assets/noakhali.png" alt="noakhali flood image" />
+          </div>
+          <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+            <div class="stats shadow bg-[#1111110D] max-w-[180px]">
+              <div class="stat flex items-center gap-2">
+                <div><img src="./assets/coin.png" alt="Coin image" /></div>
+                <div class="stat-title">
+                  <span id="totalAmountNoakhali">2500</span> BDT
+                </div>
+              </div>
+            </div>
+            <h2 class="font-bold text-xl">
+              Donate for Flood at Noakhali, Bangladesh
+            </h2>
+            <p class="font-light text-base">
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <form class="flex flex-col gap-4">
+              <input
+                id="donateAmountNoakhali"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="input input-bordered"
+                autocomplete="off"
+                required
+              />
+              <button id="donateBtnNoakhali" class="btn bg-my-green">
+                Donate Now
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <section
+          class="border-2 rounded-lg flex flex-col lg:flex-row p-8 gap-2 justify-evenly"
+        >
+          <div class="lg:w-[31rem] border border-slate-400 border-dashed">
+            <img src="./assets/feni.png" alt="feni flood image" />
+          </div>
+          <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+            <div class="stats shadow bg-[#1111110D] max-w-[180px]">
+              <div class="stat flex items-center gap-2">
+                <div><img src="./assets/coin.png" alt="Coin image" /></div>
+                <div class="stat-title">
+                  <span id="totalAmountFeni">2600</span> BDT
+                </div>
+              </div>
+            </div>
+            <h2 class="font-bold text-xl">
+              Donate for Flood Relief in Feni,Bangladesh
+            </h2>
+            <p class="font-light text-base">
+              The recent floods in Feni have devastated local communities,
+              leading to severe disruption and loss. Your generous donation will
+              help provide immediate aid, including food, clean water, and
+              medical supplies, to those affected by this calamity. Together, we
+              can offer crucial support and help rebuild lives in the aftermath
+              of this disaster. Every contribution counts towards making a real
+              difference. Please consider donating today to assist those in
+              urgent need.
+            </p>
+            <form class="flex flex-col gap-4">
+              <input
+                id="donateAmountFeni"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="input input-bordered"
+                autocomplete="off"
+                required
+              />
+              <button id="donateBtnFeni" class="btn bg-my-green">
+                Donate Now
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <section
+          class="border-2 rounded-lg flex flex-col lg:flex-row p-8 gap-2 justify-evenly"
+        >
+          <div class="lg:w-[31rem] border border-slate-400 border-dashed">
+            <img src="./assets/quota-protest.png" alt="quota protest image" />
+          </div>
+          <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+            <div class="stats shadow bg-[#1111110D] max-w-[180px]">
+              <div class="stat flex items-center gap-2">
+                <div><img src="./assets/coin.png" alt="Coin image" /></div>
+                <div class="stat-title">
+                  <span id="totalAmountQuota">3400</span> BDT
+                </div>
+              </div>
+            </div>
+            <h2 class="font-bold text-xl">
+              Aid for Injured in the Quota Movement
+            </h2>
+            <p class="font-light text-base">
+              The recent Quota movement has resulted in numerous injuries and
+              significant hardship for many individuals. Your support is crucial
+              in providing medical assistance, rehabilitation, and necessary
+              supplies to those affected. By contributing, you help ensure that
+              injured individuals receive the care and support they need during
+              this challenging time. Every donation plays a vital role in
+              alleviating their suffering and aiding in their recovery. Please
+              consider making a donation to support these brave individuals in
+              their time of need.
+            </p>
+            <form class="flex flex-col gap-4">
+              <input
+                id="donateAmountQuota"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="input input-bordered"
+                autocomplete="off"
+                required
+              />
+              <button id="donateBtnQuota" class="btn bg-my-green">
+                Donate Now
+              </button>
+            </form>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="bg-[#F9F7F3] h-20"></footer>
+
+    <script src="./jsFiles/utilities.js"></script>
+    <script src="./jsFiles/donation.js"></script>
   </body>
 </html>
