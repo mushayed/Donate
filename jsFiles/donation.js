@@ -4,6 +4,7 @@ document.getElementById('donateBtnNoakhali').addEventListener('click', function(
 
     const amountNoakhali =  getValueFromInputField('donateAmountNoakhali');
     donate(amountNoakhali, 'totalAmountNoakhali');
+    document.getElementById('donateAmountNoakhali').value = '';
 })
 
 document.getElementById('donateBtnFeni').addEventListener('click', function(event) {
@@ -11,6 +12,7 @@ document.getElementById('donateBtnFeni').addEventListener('click', function(even
 
     const amountFeni =  getValueFromInputField('donateAmountFeni'); 
     donate(amountFeni, 'totalAmountFeni');
+    document.getElementById('donateAmountFeni').value = '';
 })
 
 document.getElementById('donateBtnQuota').addEventListener('click', function(event) {
@@ -18,4 +20,5 @@ document.getElementById('donateBtnQuota').addEventListener('click', function(eve
 
     const amountQuota =  getValueFromInputField('donateAmountQuota');
     donate(amountQuota, 'totalAmountQuota');
+    document.getElementById('donateAmountQuota').value = '';
 })

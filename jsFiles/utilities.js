@@ -27,7 +27,7 @@ function donate(amount, id) {
 
     const amountNumeric = Number(amount);
 
-    if (isNaN(amount) || amount.trim() === '' || amountNumeric > myBalanceNumeric) {
+    if (isNaN(amount) || amount.trim() === '' || amountNumeric > myBalanceNumeric || amountNumeric < 1) {
         alert("Invalid Donation Amount!");
     } 
     else {
@@ -39,5 +39,7 @@ function donate(amount, id) {
 
         document.getElementById(id).innerText = existingAmountNumeric;
         document.getElementById('my-balance').innerText = myBalanceNumeric;
+
+        document.getElementById('confirmation-modal').showModal();
     }
 }
