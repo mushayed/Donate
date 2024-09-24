@@ -22,3 +22,8 @@ document.getElementById('donateBtnQuota').addEventListener('click', function(eve
     donate(amountQuota, 'totalAmountQuota');
     document.getElementById('donateAmountQuota').value = '';
 })
+
+
+document.getElementById('blogBtn').addEventListener('click', function() {
+    window.location.href = 'blog.html';
+})

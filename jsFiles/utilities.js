@@ -43,3 +43,4 @@ function donate(amount, id) {
         document.getElementById('confirmation-modal').showModal();
     }
 }
+
