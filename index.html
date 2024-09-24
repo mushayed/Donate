@@ -82,16 +82,16 @@
           class="container mx-auto h-20 flex items-center justify-center gap-3"
         >
           <div>
-            <a class="btn bg-my-green">Donation</a>
+            <a id="donationBtn" class="btn bg-my-green">Donation</a>
           </div>
           <div>
-            <a class="btn">History</a>
+            <a id="historyBtn" class="btn">History</a>
           </div>
         </section>
         <div class="border-b-2 sticky top-36"></div>
       </section>
 
-      <section class="w-[90%] lg:container mx-auto flex flex-col gap-8 py-8">
+      <section id="donation-state" class="w-[90%] lg:container mx-auto flex flex-col gap-8 py-8">
         <section
           class="border-2 rounded-lg flex flex-col lg:flex-row p-8 gap-2 justify-evenly"
         >
@@ -241,6 +241,12 @@
             </div>
           </div>
         </dialog>
+      </section>
+
+
+      <!-- History section start here -->
+      <section id="history-state" class="hidden">
+        History Section
       </section>
     </main>
 

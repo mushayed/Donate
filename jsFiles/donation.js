@@ -27,3 +27,14 @@ document.getElementById('donateBtnQuota').addEventListener('click', function(eve
 document.getElementById('blogBtn').addEventListener('click', function() {
     window.location.href = 'blog.html';
 })
+
+
+document.getElementById('donationBtn').addEventListener('click', function() {
+    toggleButtonColor('donationBtn', 'historyBtn');
+    toggleState('donation-state', 'history-state');
+})
+
+document.getElementById('historyBtn').addEventListener('click', function() {
+    toggleButtonColor('historyBtn', 'donationBtn');
+    toggleState('history-state', 'donation-state');
+})

@@ -44,3 +44,20 @@ function donate(amount, id) {
     }
 }
 
+
+
+function toggleButtonColor(clickedButtonId, unclickedButtonId) {
+    const clickedButton = document.getElementById(clickedButtonId);
+    const unclickedButton = document.getElementById(unclickedButtonId);
+
+    unclickedButton.classList.remove('bg-my-green');
+    clickedButton.classList.add('bg-my-green');
+}
+
+function toggleState(clickedStageId, unclickedStageId) {
+    const clickedStage = document.getElementById(clickedStageId);
+    const unclickedStage = document.getElementById(unclickedStageId);
+
+    clickedStage.classList.remove('hidden');
+    unclickedStage.classList.add('hidden');
+}
