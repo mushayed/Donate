@@ -3,24 +3,36 @@ document.getElementById('donateBtnNoakhali').addEventListener('click', function(
     event.preventDefault();
 
     const amountNoakhali =  getValueFromInputField('donateAmountNoakhali');
-    donate(amountNoakhali, 'totalAmountNoakhali');
+    const succes =  donate(amountNoakhali, 'totalAmountNoakhali');
     document.getElementById('donateAmountNoakhali').value = '';
+
+    if(succes) {
+        updateHistory(amountNoakhali, 'heading-noakhali');
+    }
 })
 
 document.getElementById('donateBtnFeni').addEventListener('click', function(event) {
     event.preventDefault();
 
     const amountFeni =  getValueFromInputField('donateAmountFeni'); 
-    donate(amountFeni, 'totalAmountFeni');
+    const succes =  donate(amountFeni, 'totalAmountFeni');
     document.getElementById('donateAmountFeni').value = '';
+
+    if(succes) {
+        updateHistory(amountFeni, 'heading-feni');
+    }
 })
 
 document.getElementById('donateBtnQuota').addEventListener('click', function(event) {
     event.preventDefault();
 
     const amountQuota =  getValueFromInputField('donateAmountQuota');
-    donate(amountQuota, 'totalAmountQuota');
+    const succes =  donate(amountQuota, 'totalAmountQuota');
     document.getElementById('donateAmountQuota').value = '';
+
+    if(succes) {
+        updateHistory(amountQuota, 'heading-quota');
+    }
 })
 
 

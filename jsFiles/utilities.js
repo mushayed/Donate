@@ -29,6 +29,7 @@ function donate(amount, id) {
 
     if (isNaN(amount) || amount.trim() === '' || amountNumeric > myBalanceNumeric || amountNumeric < 1) {
         alert("Invalid Donation Amount!");
+        return false;
     } 
     else {
         let existingAmount = document.getElementById(id).innerText;
@@ -41,6 +42,7 @@ function donate(amount, id) {
         document.getElementById('my-balance').innerText = myBalanceNumeric;
 
         document.getElementById('confirmation-modal').showModal();
+        return true;
     }
 }
 
@@ -60,4 +62,38 @@ function toggleState(clickedStageId, unclickedStageId) {
 
     clickedStage.classList.remove('hidden');
     unclickedStage.classList.add('hidden');
+
+    const footerStage = document.getElementById('footer-stage');
+    if(clickedStageId === 'history-state') {
+        footerStage.classList.add('hidden');
+        clickedStage.classList.add('flex');
+    }
+    else {
+        footerStage.classList.add('flex');
+        unclickedStage.classList.remove('flex');
+    }
+}
+
+
+function updateHistory(donationAmount, headingId) {
+    const historyState = document.getElementById('history-state');
+    const headingText = document.getElementById(headingId).innerText;
+
+    const innerSection = document.createElement('section');
+    innerSection.classList.add('border-2', 'rounded-lg', 'flex', 'flex-col', 'p-8', 'gap-2', 'justify-evenly');
+
+    const heading = document.createElement('h3');
+    heading.classList.add('text-xl', 'font-bold');
+    heading.textContent = `${donationAmount} Taka is Donated for ${headingText}`;
+
+    const dateParagraph = document.createElement('p');
+    dateParagraph.classList.add('text-base', 'font-light');
+
+    const currentDate = new Date();
+    dateParagraph.textContent = `Date: ${currentDate}`;
+
+    innerSection.appendChild(heading);
+    innerSection.appendChild(dateParagraph);
+
+    historyState.appendChild(innerSection);
 }
