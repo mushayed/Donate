@@ -69,7 +69,7 @@ function toggleState(clickedStageId, unclickedStageId) {
         clickedStage.classList.add('flex');
     }
     else {
-        footerStage.classList.add('flex');
+        footerStage.classList.remove('hidden');
         unclickedStage.classList.remove('flex');
     }
 }
